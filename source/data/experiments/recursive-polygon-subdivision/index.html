@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Recursive Polygon Subdivision</title>
+		<link rel="stylesheet" type="text/css" href="/css/experiment.css" media="screen"/>
+		<style type="text/css">
+			html, body {background: #f5f5f5;}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		<script type="text/javascript">
+			
+			var flashvars  = {},
+					params     = {wmode: 'opaque'},
+					attributes = {};
+					
+			swfobject.embedSWF("subdivision.swf", "flash-content", "100%", "100%", "10.0.0", "/__shared/swf/expressInstall.swf", flashvars, params, attributes);
+			
+		</script>
+	</head>
+	<body class="experiment fullscreen">
+		<div id="flash-content">
+			<p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+
+	ANT build file for soulwire.co.uk
+	
+	@author Justin Windle
+	
+	Combines blocks of CSS/JS files
+	Updates references is templates
+	Minifies CSS using YUI Compressor
+	Minifies JavaScript using YUI Compressor
+	
+	Usage:
+	
+	$ cd {project directory}
+	$ ant build
+	
+-->
+
+<project name="Build" default="build" basedir=".">
+	
+	<!--
+
+		Include the build properties
+
+	-->
+
+	<property file="build.properties"/>
+	
+	<!--
+
+		Using Ant-Contrib
+
+	-->
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement location="${ANT_CONTRIB}"/>
+		</classpath>
+	</taskdef>
+	
+	<!--
+	
+		The main build task
+	
+	-->
+	
+	<target name="build" depends="clean, clone, make" />
+	
+	<!--
+	
+		Compile with Closure compiler
+	
+	-->
+	
+	<taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask" classpath="${COMPILER}" />
+	
+	<!--
+
+		Minify with YUI
+
+	-->
+	
+	<macrodef name="yui-minify">
+		<attribute name="target" default="" />
+		<attribute name="type" default="css" />
+		<sequential>
+			<echo message="YUI Compressor: Minifying '@{target}'..." />
+			<exec executable="java" failonerror="true">
+				<arg line="-jar ${COMPRESSOR}" />
+				<arg line="-o @{target} @{target}" />
+				<arg line="--line-break 0" />
+				<arg line="--type @{type}" />
+				<arg line="_--verbose" />
+			</exec>
+		</sequential>
+	</macrodef>
+	
+	<!--
+
+		Combine & Compile
+
+	-->
+	
+	<macrodef name="compile">
+		<attribute name="type"/>
+		<attribute name="inputs"/>
+		<attribute name="output"/>
+		<sequential>
+			<concat destfile="@{output}" append="true">
+				<filelist dir="/" files="@{inputs}"/>
+			</concat>
+			<if>
+				<equals arg1="@{type}" arg2="css" />
+				<then>
+					<yui-minify target="@{output}" type="css" />
+				</then>
+				<elseif>
+					<equals arg1="@{type}" arg2="js" />
+					<then>
+						<!--<yui-minify target="@{output}" type="js" />-->
+						<jscomp compilationLevel="${COMPILATION}" warning="${WARNINGS}" debug="false" output="@{output}">
+							<externs dir="/">
+								<file name="${EXTERNS}" />
+							</externs>
+							<sources dir="/">
+								<file name="@{output}" />
+							</sources>
+						</jscomp>
+					</then>
+				</elseif>
+				<else>
+					<echo>Unrecognised type: "@{type}"</echo>
+				</else>
+			</if>
+		</sequential>
+	</macrodef>
+	
+	<!--
+
+		Delete
+
+	-->
+	
+	<macrodef name="remove">
+		<attribute name="files"/>
+		<sequential>
+			<delete verbose="true" failonerror="true">
+				<fileset dir="${BUILD_DIR}" includes="@{files}" />
+			</delete>
+		</sequential>
+	</macrodef>
+	
+	<!--
+
+		Updates a file
+
+	-->
+	
+	<macrodef name="update">
+		<attribute name="file"/>
+		<attribute name="content"/>
+		<sequential>
+			<echo>Update: @{file}</echo>
+			<echo message="@{content}" output="@{file}" />
+		</sequential>
+	</macrodef>
+	
+	<!--
+	
+		Cleans the build directory
+	
+	-->
+	
+	<target name="clean">
+		<delete dir="${BUILD_DIR}"/>
+		<mkdir dir="${BUILD_DIR}"/>
+	</target>
+	
+	<!--
+	
+		Clones src into build
+	
+	-->
+	
+	<target name="clone">
+		<copy todir="${BUILD_DIR}">
+			<fileset dir="${SRC_DIR}" excludes="**/*.svn,${IGNORE_DIRS}"/>
+		</copy>
+	</target>
+	
+	<!--
+
+		Process build folder
+
+	-->
+		
+	<target name="make">
+		<echo>Building Site...</echo>
+		<!-- Process HTML files -->
+		<for param="file">
+			<!-- Loop through HTML files -->
+			<fileset dir="${BUILD_DIR}" includes="**/*.html"/>
+				<sequential>
+					<var name="file" value="@{file}" />
+					<var name="content" unset="true" />
+					<!-- Load the current file into a property -->
+					<loadfile property="content" srcFile="@{file}"/>
+					<!-- This script process the resources blocks within a file -->
+					<script language="javascript">
+						<![CDATA[
+							
+							function log(msg) { echo = project.createTask("echo"); build.addTask(echo); echo.setMessage(msg); }
+							
+							// The webroot for mapping filepaths (defined in build.properties)
+							var webroot = project.getProperty( "WEB_ROOT" );
+							
+							// Get the content of the current file
+							var content = project.getProperty( "content" );
+							
+							if( content ) {
+							
+								var templates = {
+									// Template for embedding JavaScript
+									js: '<script type="text/javascript" src="${path}"></script>',
+									// Template for embedding CSS
+									css: '<link rel="stylesheet" type="text/css" href="${path}">'
+								};
+							
+								var regex = {
+									// Matches a block of linked resources
+									block:			/<\!\-\-\s?<block\s+?output\=['"]([^'"]+)['"][^]+?<\/block\>\s?\-\-\>/gi,
+									// Matches an individual resource
+									resource:		/<(script|link)[^>]+(href|src)=["']([^"']+)/gi
+								};
+							
+								var type,				// The filetype of a block
+										embed,			// Embed code for the resource
+										block,			// The current matched block
+										blockID,		// The ID of the current matched block
+										allBlocks,	// The global list of blocks
+										resource,		// A matched resource within a block
+										filePath,		// Filepath of a resource within a block
+										fileList;		// A list of resources for each block ID
+									
+								var hasChanged = false;
+								var newContent = content.toString();
+							
+								// Loop through all blocks in the current file
+								for(;block = regex.block.exec( content );) {
+								
+									// The block id is the first capture group
+									blockID = block[1];
+								
+									// Extract the filetype
+									type = blockID.match( /\w+$/ )[0].toLowerCase();
+								
+									// Generate embed code
+									embed = templates[type].replace( /\${path}/gi, blockID );
+								
+									// Update the content
+									newContent = newContent.replace( block[0], embed );
+								
+									// Flag the content as changed
+									hasChanged = true;
+								
+									// Grab the list of resources realting to this block type
+									list = project.getProperty( blockID ) || '';
+								
+									// Grab the global property for this block ID or create a new one
+									allBlocks = project.getProperty( "blocks" ) || '';
+								
+									// Add this block ID to the list if not already present
+									if( new RegExp( blockID ).test( allBlocks ) === false ) {
+										if( allBlocks.length !== 0 ) {
+											allBlocks += ',';
+										}
+										allBlocks += blockID;
+									}
+								
+									fileList = project.getProperty( blockID ) || '';
+								
+									// Find all resources linked within this block
+									for(;resource = regex.resource.exec( block[0] );) {
+									
+										// The matched filepath of the resource
+										filePath = resource[3];
+									
+										if( new RegExp( filePath ).test( fileList ) === false ) {
+											if( fileList.length !== 0 ) {
+												fileList += ',';
+											}
+											// Add the absolute path to the resource
+											fileList += (webroot + filePath);
+										}
+									
+										// Update the global file list
+										project.setProperty( blockID, fileList );
+									}
+								
+									// Update the blocks property
+									project.setProperty( "blocks", allBlocks );
+								
+									// Update the content property
+									project.setProperty( "content", newContent );
+								}
+								
+								if( hasChanged ) {
+									var update = project.createTask( "update" );
+									update.setDynamicAttribute( "content", newContent );
+									update.setDynamicAttribute( "file", project.getProperty( "file" ) );
+									update.execute();
+								}
+							}
+						]]>
+					</script>
+				</sequential>
+		</for>
+		<script language="javascript">
+			<![CDATA[
+			
+				function log(msg) { echo = project.createTask("echo"); build.addTask(echo); echo.setMessage(msg); }
+				
+				// DETECT & COMPILE
+				
+				// The webroot for mapping filepaths (defined in build.properties)
+				var webroot = project.getProperty( "WEB_ROOT" );
+				
+				// Store the project base directory
+				var baseDir = project.getProperty( "basedir" );
+				
+				// Store the target build directory
+				var buildDir = project.getProperty( "BUILD_DIR" );
+				
+				var regex = {
+					// Matches an item in a list separated by commas
+					item: /[^\,]+/g
+				};
+				
+				var blocksProp,		// The value of the global blocks property
+						blocksArray,	// An array of block IDs within the blocks property
+						blockMatch,		// The result of a regex match on a block list
+						filesProp,		// The value of the global resources property for a block
+						filesArray,		// An array of resource paths within a files property
+						fileType,			// The filetype of the block being compiled
+						output;				// The output file
+				
+				// Process all block types we've found
+				blocksProp = project.getProperty( "blocks" );
+				
+				if( blocksProp ) {
+					
+					// Loop through all block IDs in the comma separated list
+					for(;blockMatch = regex.item.exec( blocksProp );) {
+						
+						// Grab the global property for this block ID
+						filesProp = project.getProperty( blockMatch );
+						
+						if( filesProp ) {
+							
+							// Split the commas separated list
+							filesArray = filesProp.match( /[^\,]+/g );
+							
+							output = (webroot + blockMatch.toString());
+							fileType = output.match( /\w+$/ );
+							
+							// Create a compile task and call it with parameters
+							var compile = project.createTask( "compile" );
+							compile.setDynamicAttribute( "type", fileType );
+							compile.setDynamicAttribute( "output", output );
+							compile.setDynamicAttribute( "inputs", filesArray );
+							compile.execute();
+						}
+					}
+				}
+				
+				// DETECT & DELETE
+				
+				if( blocksProp ) {
+					
+					// Loop through all block IDs in the comma separated list
+					for(;blockMatch = regex.item.exec( blocksProp );) {
+						
+						// Grab the global property for this block ID
+						filesProp = project.getProperty( blockMatch );
+						
+						if( filesProp ) {
+							
+							// Split the commas separated list
+							filesArray = filesProp.match( /[^\,]+/g );
+							
+							// Double check that we're only deleting inside the project!
+							
+							var safe = [];
+							var filePath;
+							
+							for( var i = 0; i < filesArray.length; ++i ) {
+								if( filesArray[i].match( baseDir ) ) {
+									// Format the filepath for the delete task
+									filePath = filesArray[i].replace( buildDir, '' );
+									safe.push( filePath.replace( /^\/+/, '' ) );
+								}
+							}
+							
+							// Create a remove (delete) task and call it with the files
+							var remove = project.createTask( "remove" );
+							remove.setDynamicAttribute( "files", safe.toString() );
+							remove.execute();
+						}
+					}
+				}
+				
+			]]>
+		</script>
+		<echo>Cleaning empty directories</echo>
+		<delete includeemptydirs="true" verbose="true" failonerror="true">
+			<fileset dir="${BUILD_DIR}">
+				<and>
+					<size value="0"/>
+					<type type="dir"/>
+				 </and>
+			</fileset>
+		</delete>
+	</target>
+	
+</project>

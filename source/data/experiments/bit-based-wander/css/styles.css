@@ -1,0 +1,13 @@
+html,body{font-family:"Courier New",Courier,monospace;text-transform:uppercase;overflow:hidden;font-size:12px;height:100%;width:100%;color:#FFF;}
+header{border-bottom:1px solid #FFF;background-color:#222;line-height:30px;height:30px;width:100%;}
+header h1,header h2{display:inline;}
+header h1{padding-left:10px;}
+header h2{color:#999;}
+header ul{position:absolute;right:10px;top:0;}
+header ul li{display:inline;}
+header a,header a:visited{text-decoration:none;color:#CCC;}
+header a:hover{text-decoration:underline;color:#FFF;}
+#info{color:#999;}
+#canvas{background-color:#F2F2F2;}
+#overlay{position:absolute;height:100%;width:100%;left:0;top:30px;}
+#overlay span{background-color:#222;margin:-15px 0 0 -65px;position:absolute;line-height:30px;padding:0 20px;left:50%;top:50%;}
