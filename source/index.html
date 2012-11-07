@@ -1,886 +1,886 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Soulwire &raquo; Experiments in Code</title>
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic&v1" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="/css/style.css" />
-		<style type="text/css">
-			@-webkit-keyframes loading { 0% { background-position: 0 0; } 100% { background-position: 16px 0; } }
-			@-moz-keyframes loading { 0% { background-position: 0 0; } 100% { background-position: 16px 0; } }
-		</style>
-		<meta name="author" content="Justin Windle">
-		<meta name="copyright" content="&copy; 2011 Justin Windle">
-		<meta name="description" content="Experiments in Code">
-		<script src="/js/lib/modernizr.js"></script>
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-		</script>
-	</head>
-	<!--
+    <head>
+        <title>Soulwire &raquo; Experiments in Code</title>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic&v1" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <style type="text/css">
+            @-webkit-keyframes loading { 0% { background-position: 0 0; } 100% { background-position: 16px 0; } }
+            @-moz-keyframes loading { 0% { background-position: 0 0; } 100% { background-position: 16px 0; } }
+        </style>
+        <meta name="author" content="Justin Windle">
+        <meta name="copyright" content="&copy; 2011 Justin Windle">
+        <meta name="description" content="Experiments in Code">
+        <script src="/js/lib/modernizr.js"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+        </script>
+    </head>
+    <!--
 
-		:)
+        :)
 
-	-->
-	<body>
-		<!--
-			HEADER
-		-->
-		<header id="header">
-			<h1>
-				<a href="http://soulwire.co.uk" title="Soulwire (Justin Windle)">Soulwire &raquo; Justin Windle</a>
-			</h1>
-			<hgroup class="hidden">
-				<h2>Experiments in code</h2>
-				<h3>Interactive developer</h3>
-			</hgroup>
-			<nav id="sectionMenu">
-				<a href="/hello" title="A quick introduction">Hello</a>
-				<a href="/experiments" title="Experiments in code">Experiments</a>
-				<a href="/stream" title="My activity stream">Stream</a>
-				<a href="/nodes" title="Where else to find me">Nodes</a>
-			</nav>
-			<a class="button close hidden" href="#"><span>Close</span></a>
-			<div class="colour"></div>
-		</header>
-		<div id="sections">
-			<!--
-				INTRODUCTION
-			-->
-			<section id="hello" data-slug="hello" data-controller="SOULWIRE.Introduction">
-				<header>
-					<h1>Justin Windle</h1>
-					<h2>Interactive Developer</h2>
-				</header>
-				<article class="introduction">
-					<hgroup>
-						<h2><span>Hello</span></h2>
-						<h3><span>How's it going? My name is Justin</span></h3>
-						<h4><span>I'm an interactive developer</span></h4>
-						<h5><span>I work with <a href="http://qwiki.com/" target="_blank">Qwiki</a>, NYC</span></h5>
-						<h6><span>I'm from England</span></h6>
-					</hgroup>
-					<dl>
-						<dt>I like</dt>
-						<dd>
-							<ul>
-								<li>Actionscript</li>
-								<li>Ambient Music</li>
-								<li>Animation</li>
-								<li>Cycling</li>
-								<li>Design</li>
-								<li>Drawing</li>
-								<li>Drumming</li>
-								<li>Generative Art</li>
-								<li>Illustration</li>
-								<li>Javascript</li>
-								<li>Open Frameworks</li>
-								<li>Processing</li>
-								<li>Programming</li>
-								<li>Physics</li>
-								<li>Spicy Food</li>
-								<li>Strong Coffee</li>
-								<li>Typography</li>
-								<li>WebGL</li>
-							</ul>
-						</dd>
-					</dl>
-					<figure>
-						<ul>
-							<li><img src="/img/mugshots/justin-windle-001.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-002.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-003.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-004.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-005.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-006.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-007.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-008.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-009.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-010.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-011.jpg"/></li>
-							<li><img src="/img/mugshots/justin-windle-012.jpg"/></li>
-						</ul>
-					</figure>
-				</article>
-			</section>
-			<!--
-				EXPERIMENTS
-			-->
-			<section id="experiments" class="scroll-x" data-slug="experiments" data-controller="SOULWIRE.Experiments">
-				<header>
-					<h1>Experiments</h1>
-					<h2>Things I do with code in my spare time</h2>
-				</header>
-				<div class="scroll-x">
-					<div class="container-x">
-						<!--
-							TENTACLES
-						-->
-						<article id="muscular-hydrostats" class="new" data-slug="muscular-hydrostats" data-content="http://soulwire.github.com/Muscular-Hydrostats/" data-color="#283442" data-comments="true">
-						  <figure>
-							<div class="slideshow">
-							  <ul>
-								<li><img src="/img/experiments/muscular-hydrostats/muscular-hydrostats-001.jpg" alt="muscular-hydrostats"></li>
-								<li><img src="/img/experiments/muscular-hydrostats/muscular-hydrostats-002.jpg" alt="muscular-hydrostats"></li>
-								<li><img src="/img/experiments/muscular-hydrostats/muscular-hydrostats-003.jpg" alt="muscular-hydrostats"></li>
-								<li><img src="/img/experiments/muscular-hydrostats/muscular-hydrostats-004.jpg" alt="muscular-hydrostats"></li>
-							  </ul>
-							</div>
-						  </figure>
-						  <header>
-							<hgroup>
-							  <h2><a class="open" href="/experiments/muscular-hydrostats/" title="Muscular Hydrostats">Muscular Hydrostats</a></h2>
-							  <h3><a class="open" href="/experiments/muscular-hydrostats/" title="Tentacle simulation using inverse kinematics">Tentacle simulation using inverse kinematics</a></h3>
-							</hgroup>
-						  </header>
-						  <div class="details">
-							<dl>
-							  <dt>Concept</dt><dd>An attempt to simulate the tentacles of a living organism.</dd>
-							  <dt>Toolkit</dt><dd>JavaScript, Canvas, Inverse Kinematics, Sketch.js, dat.GUI</dd>
-							</dl>
-							<a class="button view open" href="#"><span>View Experiment</span></a>
-						  </div>
-						</article>
-						<!--
-							MAKISU
-						-->
-						<article id="makisu" data-slug="makisu" data-content="http://soulwire.github.com/Makisu/" data-color="#f5f5f5" data-comments="true">
-						  <figure>
-							<div class="slideshow">
-							  <ul>
-								<li><img src="/img/experiments/makisu/makisu-001.jpg" alt="Makisu"></li>
-								<li><img src="/img/experiments/makisu/makisu-002.jpg" alt="Makisu"></li>
-							  </ul>
-							</div>
-						  </figure>
-						  <header>
-							<hgroup>
-							  <h2><a class="open" href="/experiments/makisu/" title="Makisu">Makisu</a></h2>
-							  <h3><a class="open" href="/experiments/makisu/" title="CSS 3D Dropdown Concept">CSS 3D Dropdown Concept</a></h3>
-							</hgroup>
-						  </header>
-						  <div class="details">
-							<dl>
-							  <dt>Concept</dt><dd>An experimental dropdown concept using CSS 3D. This was inspired by the Makisu bamboo mat used in Japanese cooking.</dd>
-							  <dt>Toolkit</dt><dd>JavaScript, CSS 3D</dd>
-							</dl>
-							<a class="button view open" href="#"><span>View Experiment</span></a>
-						  </div>
-						</article>
-						<!--
-							TIME CAMERA
-						-->
-						<article id="time-camera" data-slug="time-camera" data-content="/data/experiments/time-camera/" data-color="#f5f5f5" data-comments="true">
-						  <figure>
-							<div class="slideshow">
-							  <ul>
-								<li><img src="/img/experiments/time-camera/time-camera-001.jpg" alt="Time Camera"></li>
-								<li><img src="/img/experiments/time-camera/time-camera-002.jpg" alt="Time Camera"></li>
-								<li><img src="/img/experiments/time-camera/time-camera-003.jpg" alt="Time Camera"></li>
-								<li><img src="/img/experiments/time-camera/time-camera-004.jpg" alt="Time Camera"></li>
-								<li><img src="/img/experiments/time-camera/time-camera-005.jpg" alt="Time Camera"></li>
-							  </ul>
-							</div>
-						  </figure>
-						  <header>
-							<hgroup>
-							  <h2><a class="open" href="/experiments/time-camera/" title="Time Camera">Time Camera</a></h2>
-							  <h3><a class="open" href="/experiments/time-camera/" title="Time Based Camera Using Canvas and WebRTC">Time Based Camera Using Canvas and WebRTC</a></h3>
-							</hgroup>
-						  </header>
-						  <div class="details">
-							<dl>
-							  <dt>Concept</dt><dd>A 15 minute hack, inspired by the slit scan photography of Jay Mark Johnson which "emphasizes time over space"</dd>
-							  <dt>Toolkit</dt><dd>JavaScript, WebRTC, Canvas</dd>
-							</dl>
-							<a class="button view open" href="#"><span>View Experiment</span></a>
-						  </div>
-						</article>
-						<!--
-							CRYSTALLIZATION
-						-->
-						<article id="crystallization" data-slug="crystallization" data-content="/data/experiments/crystallization/" data-color="#f5f5f5" data-comments="true">
-						  <figure>
-							<div class="slideshow">
-							  <ul>
-								<li><img src="/img/experiments/crystallization/crystallization-001.jpg" alt="Crystallization"></li>
-								<li><img src="/img/experiments/crystallization/crystallization-002.jpg" alt="Crystallization"></li>
-								<li><img src="/img/experiments/crystallization/crystallization-003.jpg" alt="Crystallization"></li>
-								<li><img src="/img/experiments/crystallization/crystallization-004.jpg" alt="Crystallization"></li>
-								<li><img src="/img/experiments/crystallization/crystallization-005.jpg" alt="Crystallization"></li>
-							  </ul>
-							</div>
-						  </figure>
-						  <header>
-							<hgroup>
-							  <h2><a class="open" href="/experiments/crystallization/" title="Crystallization">Crystallization</a></h2>
-							  <h3><a class="open" href="/experiments/crystallization/" title="Recursive Subdivision with Canvas and JavaScript">Recursive Subdivision with Canvas and JavaScript</a></h3>
-							</hgroup>
-						  </header>
-						  <div class="details">
-							<dl>
-							  <dt>Concept</dt><dd>A JavaScript, CoffeeScript &amp; canvas implementation of an old Flash experiment exploring the recursive subdivision of polygons</dd>
-							  <dt>Toolkit</dt><dd>JavaScript, CoffeeScript, Canvas</dd>
-							</dl>
-							<a class="button view open" href="#"><span>View Experiment</span></a>
-						  </div>
-						</article>
-						<!--
-							WORM
-						-->
-						<article id="worm" data-slug="worm" data-content="/data/experiments/worm/" data-color="#1A1A1A" data-comments="true">
-						  <figure>
-							<div class="slideshow">
-							  <ul>
-								<li><img src="/img/experiments/worm/worm-001.jpg" alt="Coffee Physics"></li>
-								<li><img src="/img/experiments/worm/worm-002.jpg" alt="Coffee Physics"></li>
-								<li><img src="/img/experiments/worm/worm-003.jpg" alt="Coffee Physics"></li>
-								<li><img src="/img/experiments/worm/worm-004.jpg" alt="Coffee Physics"></li>
-								<li><img src="/img/experiments/worm/worm-005.jpg" alt="Coffee Physics"></li>
-							  </ul>
-							</div>
-						  </figure>
-						  <header>
-							<hgroup>
-							  <h2><a class="open" href="/experiments/worm/" title="Worm Toy">Worm Mouse Toy</a></h2>
-							  <h3><a class="open" href="/experiments/worm/" title="Playing with Spring Physics">Playing with Spring Physics</a></h3>
-							</hgroup>
-						  </header>
-						  <div class="details">
-							<dl>
-							  <dt>Concept</dt><dd>Whilst working on some sketches for tail physics, I found some interesting glitches in not quite complete spring physics. So I ran with it.</dd>
-							  <dt>Toolkit</dt><dd>JavaScript, Canvas, Spring Physics</dd>
-							</dl>
-							<a class="button view open" href="#"><span>View Experiment</span></a>
-						  </div>
-						</article>
-						<!--
-							COFFEE PHYSICS
-						-->
-						<article id="coffee-physics" data-slug="coffee-physics" data-content="http://soulwire.github.com/Coffee-Physics/" data-color="#1A1A1A" data-comments="true">
-						  <figure>
-							<div class="slideshow">
-							  <ul>
-								<li><img src="/img/experiments/coffee-physics/coffee-physics-001.jpg" alt="Coffee Physics"></li>
-								<li><img src="/img/experiments/coffee-physics/coffee-physics-002.jpg" alt="Coffee Physics"></li>
-								<li><img src="/img/experiments/coffee-physics/coffee-physics-003.jpg" alt="Coffee Physics"></li>
-								<li><img src="/img/experiments/coffee-physics/coffee-physics-004.jpg" alt="Coffee Physics"></li>
-								<li><img src="/img/experiments/coffee-physics/coffee-physics-005.jpg" alt="Coffee Physics"></li>
-							  </ul>
-							</div>
-						  </figure>
-						  <header>
-							<hgroup>
-							  <h2><a class="open" href="/experiments/coffee-physics/" title="Coffee Physics">Coffee Physics</a></h2>
-							  <h3><a class="open" href="/experiments/coffee-physics/" title="Lightweight CoffeeScript Physics Engine">Lightweight CoffeeScript Physics Engine</a></h3>
-							</hgroup>
-						  </header>
-						  <div class="details">
-							<dl>
-							  <dt>Concept</dt><dd>During my <a href="http://www.fitc.ca/">FITC</a> talk I released the <a href="https://github.com/soulwire/Coffee-Physics/" title="CoffeePhysics">CoffeePhysics</a> library and a series of <a href="http://soulwire.github.com/Coffee-Physics/" title="CoffeePhysics demos">demos</a> featuring particles, springs, customizable behaviors and multiple integrators and renderers. Check out the <a href="https://github.com/soulwire/Coffee-Physics/" title="CoffeePhysics">GitHub project</a> for more information.</dd>
-							  <dt>Toolkit</dt><dd>JavaScript, Canvas, WebGL</dd>
-							</dl>
-							<a class="button view open" href="#"><span>View Experiment</span></a>
-						  </div>
-						</article>
-						<!--
-							RECURSION TOY
-						-->
-						<article id="recursion-toy" data-slug="recursion-toy" data-content="/data/experiments/recursion-toy/" data-color="#f2f2f2" data-comments="true">
-						  <figure>
-							<div class="slideshow">
-							  <ul>
-								<li><img src="/img/experiments/recursion-toy/recursion-toy-001.jpg" alt="Recursion Toy"></li>
-								<li><img src="/img/experiments/recursion-toy/recursion-toy-002.jpg" alt="Recursion Toy"></li>
-								<li><img src="/img/experiments/recursion-toy/recursion-toy-003.jpg" alt="Recursion Toy"></li>
-								<li><img src="/img/experiments/recursion-toy/recursion-toy-004.jpg" alt="Recursion Toy"></li>
-								<li><img src="/img/experiments/recursion-toy/recursion-toy-005.jpg" alt="Recursion Toy"></li>
-							  </ul>
-							</div>
-						  </figure>
-						  <header>
-							<hgroup>
-							  <h2><a class="open" href="/experiments/recursion-toy/" title="Recursion Toy">Super Recursion Toy</a></h2>
-							  <h3><a class="open" href="/experiments/recursion-toy/" title="Explore Branching Algorithms">Exploring Branching Algorithms</a></h3>
-							</hgroup>
-						  </header>
-						  <div class="details">
-							<dl>
-							  <dt>Concept</dt><dd>Revisiting one of my favorite topics - recursion. This canvas based tool alows you to explore branching algorithms &amp; rendering techniques, as well as save a snapshot of your creations. It's also <a href="https://github.com/soulwire/Recursion-Toy" target="_blank">open source</a>, which is always nice&hellip;</dd>
-							  <dt>Toolkit</dt><dd>JavaScript, Canvas, <a href="http://code.google.com/p/dat-gui/" target="_blank">Dat.GUI</a></dd>
-							</dl>
-							<a class="button view open" href="#"><span>View Experiment</span></a>
-						  </div>
-						</article>
-						<!--
-							MUSHROOM CORAL
-						-->
-						<article id="generative-coral-patterns" data-slug="generative-coral-patterns" data-content="/data/experiments/mushroom-coral/" data-color="#f2f2f2" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-001.jpg" alt="Mushroom Coral"></li>
-										<li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-002.jpg" alt="Mushroom Coral"></li>
-										<li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-003.jpg" alt="Mushroom Coral"></li>
-										<li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-004.jpg" alt="Mushroom Coral"></li>
-										<li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-005.jpg" alt="Mushroom Coral"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/generative-coral-patterns/" title="Mushroom Coral">Mushroom Coral</a></h2>
-									<h3><a class="open" href="/experiments/generative-coral-patterns/" title="Generative Coral Patterns">Generative Coral Patterns</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Simulating patterns found in nature, such as those seen in certain types of coral. These forms are generated using the numbers from the <a href="http://en.wikipedia.org/wiki/Perlin_noise" target="_blank">Perlin Noise</a> algorithm and applying them to repeating textures</dd>
-									<dt>Toolkit</dt><dd>Actionscript 3.0, Flash, Perlin Noise</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							PRIMORDIAL SOUP
-						-->
-						<article id="primordial-soup" data-slug="primordial-soup" data-content="/data/experiments/primordial-soup/" data-color="#f5f5f5" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/primordial-soup/primordial-soup-001.jpg" alt="Primordial Soup"></li>
-										<li><img src="/img/experiments/primordial-soup/primordial-soup-002.jpg" alt="Primordial Soup"></li>
-										<li><img src="/img/experiments/primordial-soup/primordial-soup-003.jpg" alt="Primordial Soup"></li>
-										<li><img src="/img/experiments/primordial-soup/primordial-soup-004.jpg" alt="Primordial Soup"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/primordial-soup/" title="Primordial Soup">Primordial Soup</a></h2>
-									<h3><a class="open" href="/experiments/primordial-soup/" title="Generative Locomotion Study">Generative Locomotion of Autonomous Agents</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Generative, autonomous creatures inhabit a viscous liquid. Their survival depends on their ability to move, which is determined by their DNA as they evolve through the generations. Locomotion is determined by interactions between body segments.</dd>
-									<dt>Toolkit</dt><dd>JavaScript, Spring Physics, Canvas</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							BIT BASED WANDER
-						-->
-						<article id="bit-based-wander" data-slug="bit-based-wander" data-content="/data/experiments/bit-based-wander/" data-color="#f2f2f2" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/bit-based-wander/bit-based-wander-001.jpg" alt="Bit Based Wander"></li>
-										<li><img src="/img/experiments/bit-based-wander/bit-based-wander-002.jpg" alt="Bit Based Wander"></li>
-										<li><img src="/img/experiments/bit-based-wander/bit-based-wander-003.jpg" alt="Bit Based Wander"></li>
-										<li><img src="/img/experiments/bit-based-wander/bit-based-wander-004.jpg" alt="Bit Based Wander"></li>
-										<li><img src="/img/experiments/bit-based-wander/bit-based-wander-005.jpg" alt="Bit Based Wander"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/bit-based-wander/" title="Bit Based Wander">Bit Based Wander</a></h2>
-									<h3><a class="open" href="/experiments/bit-based-wander/" title="2D Wander Algorithm Powered by Bits &amp; Bytes">2D Wander Algorithm Powered by Bits &amp; Bytes</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Continuing with my bit / byte visualisation experiments, this sketch uses the 8 bits of each byte in the dragged file to propel autonomous wandering agents along in 2D space</dd>
-									<dt>Toolkit</dt><dd>JavaScript, File API, Drag & Drop, Canvas</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<article id="triangulation" data-slug="triangulation" data-content="/data/experiments/triangulation/" data-color="#f5f5f5" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/triangulation/triangulation-001.jpg" alt="Trendy Triangulation"></li>
-										<li><img src="/img/experiments/triangulation/triangulation-002.jpg" alt="Trendy Triangulation"></li>
-										<li><img src="/img/experiments/triangulation/triangulation-003.jpg" alt="Trendy Triangulation"></li>
-										<li><img src="/img/experiments/triangulation/triangulation-004.jpg" alt="Trendy Triangulation"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/triangulation/" title="Triangulations">Triangulations</a></h2>
-									<h3><a class="open" href="/experiments/triangulation/" title="Trendy Illustration Generator">Trendy Illustration Generator</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>It's become quite the vogue lately to triangulate everything. If you're not generating ideas yourself, then you may as well not bother executing them yourself either! Simply generate endless trendy triangulations with this little experiment...</dd>
-									<dt>Toolkit</dt><dd>Actionscript 3.0, Flash, Delaunay Triangulation, Felt-Tip Pens, Pencils</dd>
-								</dl>
-								<a class="button view open" href="#"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							SHOW ME YOUR BITS
-						-->
-						<article id="show-me-your-bits" data-slug="show-me-your-bits" data-content="/data/experiments/show-me-your-bits/" data-color="#fff" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/show-me-your-bits/show-me-your-bits-001.jpg" alt="Show Me Your Bits"></li>
-										<li><img src="/img/experiments/show-me-your-bits/show-me-your-bits-002.jpg" alt="Show Me Your Bits"></li>
-										<li><img src="/img/experiments/show-me-your-bits/show-me-your-bits-003.jpg" alt="Show Me Your Bits"></li>
-										<li><img src="/img/experiments/show-me-your-bits/show-me-your-bits-004.jpg" alt="Show Me Your Bits"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/show-me-your-bits/" title="Show Me Your Bits">Show Me Your Bits</a></h2>
-									<h3><a class="open" href="/experiments/show-me-your-bits/" title="Fundamentalist Data Visualisation">Fundamentalist Data Visualisation</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>It's now possible to read local files in JavaScript, without the client-server round trip. To celebrate, I decided to work on some small experiments which visualise the bits and bytes of the files you drop onto them...</dd>
-									<dt>Toolkit</dt><dd>JavaScript, File API, Drag &amp; Drop, Canvas</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							FRAGMENTED MESH
-						-->
-						<article id="fragmented-mesh" data-slug="fragmented-mesh" data-content="/data/experiments/fragmented-mesh/" data-color="#111" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/fragmented-mesh/fragmented-mesh-001.jpg" alt="Fragmented Mesh"></li>
-										<li><img src="/img/experiments/fragmented-mesh/fragmented-mesh-002.jpg" alt="Fragmented Mesh"></li>
-										<li><img src="/img/experiments/fragmented-mesh/fragmented-mesh-003.jpg" alt="Fragmented Mesh"></li>
-										<li><img src="/img/experiments/fragmented-mesh/fragmented-mesh-004.jpg" alt="Fragmented Mesh"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/fragmented-mesh/" title="Fragmented Mesh">Fragmented WebGL Mesh</a></h2>
-									<h3><a class="open" href="/experiments/fragmented-mesh/" title="Noise-Reactive Particle Sphere">Geometry Exploding in Slow Motion</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Fragmented faces of a 3D mesh exploding in slow motion. This was a quick test with WebGL and the <a href="https://github.com/mrdoob/three.js" target="_blank">THREE.js</a> library</dd>
-									<dt>Toolkit</dt><dd>JavaScript, WebGL, ThreeJS</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							NOISE SPHERE
-						-->
-						<article id="noise-reactive-particle-sphere" data-slug="noise-reactive-particle-sphere" data-content="http://player.vimeo.com/video/20266917?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" data-color="#222" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/noise-reactive-particle-sphere/noise-sphere-001.jpg" alt="Noise-Reactive Particle Sphere"></li>
-										<li><img src="/img/experiments/noise-reactive-particle-sphere/noise-sphere-002.jpg" alt="Noise-Reactive Particle Sphere"></li>
-										<li><img src="/img/experiments/noise-reactive-particle-sphere/noise-sphere-003.jpg" alt="Noise-Reactive Particle Sphere"></li>
-										<li><img src="/img/experiments/noise-reactive-particle-sphere/noise-sphere-004.jpg" alt="Noise-Reactive Particle Sphere"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/noise-reactive-particle-sphere/" title="Noise-Reactive Particle Sphere">Noise-Reactive Particle Sphere</a></h2>
-									<h3><a class="open" href="/experiments/noise-reactive-particle-sphere/" title="Noise-Reactive Particle Sphere">Experimenting with C++, Cinder & OpenGL</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Playing with Cinder, the geometry of a sphere mesh is displaced based on audio data. Each vertex is rendered as a particle. Sorry for the bad video quality - maybe I'll convert it to WebGL one day soon :)</dd>
-									<dt>Toolkit</dt><dd>C++, Cinder, OpenGL</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							WHAT THE FUCK IS MY MASHUP
-						-->
-						<article id="what-the-fuck-is-my-mashup" data-slug="what-the-fuck-is-my-mashup" data-content="http://whatthefuckismymashup.com" data-color="#FFF" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/what-the-fuck-is-my-mashup/what-the-fuck-is-my-mashup-001.jpg" alt="What The Fuck Is My Mashup?"></li>
-										<li><img src="/img/experiments/what-the-fuck-is-my-mashup/what-the-fuck-is-my-mashup-002.jpg" alt="What The Fuck Is My Mashup?"></li>
-										<li><img src="/img/experiments/what-the-fuck-is-my-mashup/what-the-fuck-is-my-mashup-003.jpg" alt="What The Fuck Is My Mashup?"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/what-the-fuck-is-my-mashup/" title="What The Fuck Is My Mashup?">What The Fuck Is My Mashup?</a></h2>
-									<h3><a class="open" href="/experiments/what-the-fuck-is-my-mashup/" title="What The Fuck Is My Mashup?">Mashup idea generator for uninspired developers</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Inspired by <a href="http://www.whatthefuckshouldimakefordinner.com/">WTFSIMFD</a>, <a href="http://whatthefuckismymashup.com" target="_blank">What The Fuck Is My Mashup</a> is a JavaScript based randomiser that takes a series of templates &amp; a corpus of words &amp; turns them into ridiculous concepts that utilise the latest technologies, APIs &amp; social media platforms!</dd>
-									<dt>Toolkit</dt><dd>JavaScript, NodeJS</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							PARTICLE SEQUENCER
-						-->
-						<article id="particle-node-sequencer" data-slug="particle-node-sequencer" data-content="/data/experiments/particle-node-sequencer/" data-color="#222" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/particle-node-sequencer/sequencer-001.jpg" alt="Particle Node Sequencer"></li>
-										<li><img src="/img/experiments/particle-node-sequencer/sequencer-002.jpg" alt="Particle Node Sequencer"></li>
-										<li><img src="/img/experiments/particle-node-sequencer/sequencer-003.jpg" alt="Particle Node Sequencer"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/particle-node-sequencer/" title="Particle Node Sequencer">Particle Node Sequencer</a></h2>
-									<h3><a class="open" href="/experiments/particle-node-sequencer/" title="Particle Node Sequencer">Generative music based around nodes &amp; proximity</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Exploring the physical interactions between particles as they generate rhythmic and unique musical compositions. This experiment inspired the iOS app, <a href="http://www.nodebeat.com" title="NodeBeat" target="_blank">NodeBeat</a></dd>
-									<dt>Toolkit</dt><dd>Flash, Audio DSP, <a href="http://code.google.com/p/tonfall/">Tonfall</a></dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							RECURSIVE POLYGON SUBDIVISION
-						-->
-						<article id="recursive-polygon-subdivision" data-slug="recursive-polygon-subdivision" data-content="/data/experiments/recursive-polygon-subdivision/" data-color="#f5f5f5" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-001.jpg" alt="Recursive Polygon Subdivision"></li>
-										<li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-002.jpg" alt="Recursive Polygon Subdivision"></li>
-										<li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-003.jpg" alt="Recursive Polygon Subdivision"></li>
-										<li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-004.jpg" alt="Recursive Polygon Subdivision"></li>
-										<li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-005.jpg" alt="Recursive Polygon Subdivision"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/recursive-polygon-subdivision/" title="Recursive Polygon Subdivision">Recursive Polygon Subdivision</a></h2>
-									<h3><a class="open" href="/experiments/recursive-polygon-subdivision/" title="Experimenting with a 2D Polygon Subdivision Algorithm">Experimenting with a 2D Polygon Subdivision Algorithm</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Split a convex polygon between two line segments, creating two new polygons. Each new polygon is then pushed into a queue, ready to be subdivided itself. A simple algorithm but with complex looking results.</dd>
-									<dt>Toolkit</dt><dd>Actionscript 3.0, Flash</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							SMACK MY GLITCH UP
-						-->
-						<article id="smack-my-glitch-up" data-slug="smack-my-glitch-up" data-content="/data/experiments/smack-my-glitch-up/" data-color="#f5f5f5" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/smack-my-glitch-up/smack-my-glitch-up-001.jpg" alt="Smack My Glitch Up"></li>
-										<li><img src="/img/experiments/smack-my-glitch-up/smack-my-glitch-up-002.jpg" alt="Smack My Glitch Up"></li>
-										<li><img src="/img/experiments/smack-my-glitch-up/smack-my-glitch-up-003.jpg" alt="Smack My Glitch Up"></li>
-										<li><img src="/img/experiments/smack-my-glitch-up/smack-my-glitch-up-004.jpg" alt="Smack My Glitch Up"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/smack-my-glitch-up" title="Smack My Glitch Up">Smack My Glitch Up</a></h2>
-									<h3><a class="open" href="/experiments/smack-my-glitch-up" title="AS3 BitmapData Glitch Generator">AS3 BitmapData Glitch Generator</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Generate endless beautiful glitches from your otherwise too perfect images. This generative tool works by rearranging the bytes in an image, causing beautiful chaos.</dd>
-									<dt>Toolkit</dt><dd>Actionscript 3.0, ByteArray</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>http://lab.soulwire.co.uk.local:8888/
-							</div>
-						</article>
-						<!--
-							PIXEL BENDER TENTACLES
-						-->
-						<article id="pixel-bender-tentacles" data-slug="pixel-bender-tentacles" data-content="/data/experiments/pixel-bender-tentacles/" data-color="#fff" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/pixel-bender-tentacles/pixel-bender-tentacles-001.jpg" alt="Pixel Bender Tentacles"></li>
-										<li><img src="/img/experiments/pixel-bender-tentacles/pixel-bender-tentacles-002.jpg" alt="Pixel Bender Tentacles"></li>
-										<li><img src="/img/experiments/pixel-bender-tentacles/pixel-bender-tentacles-003.jpg" alt="Pixel Bender Tentacles"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/pixel-bender-tentacles" title="Pixel Bender Tentacles">Pixel Bender Tentacles</a></h2>
-									<h3><a class="open" href="/experiments/pixel-bender-tentacles" title="Experimenting with Pixel Bender in Flash Player 10">Experimenting with Pixel Bender in Flash Player 10</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>Recursive growth algorithm explored through tentacles and optimised by using Pixel Bender for trigonometric functions</dd>
-									<dt>Toolkit</dt><dd>Actionscript 3.0, Pixel Bender, Recursion</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-						<!--
-							FLIPPING YOU THE BOID
-						-->
-						<article id="flipping-you-the-boid" data-slug="flipping-you-the-boid" data-content="/data/experiments/flipping-you-the-boid/" data-color="#fff" data-comments="true">
-							<figure>
-								<div class="slideshow">
-									<ul>
-										<li><img src="/img/experiments/flipping-you-the-boid/flipping-you-the-boid-001.jpg" alt="Flipping you the Boid"></li>
-										<li><img src="/img/experiments/flipping-you-the-boid/flipping-you-the-boid-002.jpg" alt="Flipping you the Boid"></li>
-										<li><img src="/img/experiments/flipping-you-the-boid/flipping-you-the-boid-003.jpg" alt="Flipping you the Boid"></li>
-										<li><img src="/img/experiments/flipping-you-the-boid/flipping-you-the-boid-004.jpg" alt="Flipping you the Boid"></li>
-									</ul>
-								</div>
-							</figure>
-							<header>
-								<hgroup>
-									<h2><a class="open" href="/experiments/flipping-you-the-boid" title="Flipping you the Boid">Flipping you the Boid</a></h2>
-									<h3><a class="open" href="/experiments/flipping-you-the-boid" title="AS3 Flocking &amp; Steering Behaviors">AS3 Flocking &amp; Steering Behaviors</a></h3>
-								</hgroup>
-							</header>
-							<div class="details">
-								<dl>
-									<dt>Concept</dt><dd>When Flash Player 10 was released with the new native Vector3D and Matrix3D Classes, I decided to use them to simulate some traditional (and some new) flocking algorithms</dd>
-									<dt>Toolkit</dt><dd>Actionscript 3.0, Flash Player 10</dd>
-								</dl>
-								<a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
-							</div>
-						</article>
-					</div>
-				</div>
-			</section>
-			<!--
-				ACTIVITY STREAM
-			-->
-			<section id="stream" data-slug="stream" data-controller="SOULWIRE.Stream">
-				<header>
-					<h1>Activity Stream</h1>
-					<h2>My diverse and amazingly interesting feeds</h2>
-				</header>
-				<div class="scroll-x">
-					<div class="container-x">
-						<section class="twitter">
-							<header>
-								<h2><a href="http://twitter.com/soulwire" title="Follow me on Twitter" target="_blank">Follow</a></h2>
-							</header>
-							<div class="scroller" data-above="2" data-below="2">
-								<header>
-									<span class="corner"></span>
-								</header>
-								<article class="template">
-									<blockquote>
-									</blockquote>
-									<aside>
-										<mark></mark>
-										<time></time>
-									</aside>
-								</article>
-								<nav>
-									<a class="button up" href="#"><span>Up</span></a>
-									<a class="button down" href="#"><span>Down</span></a>
-								</nav>
-							</div>
-						</section>
-						<section class="blog">
-							<header>
-								<h2><a href="http://blog.soulwire.co.uk" title="Soulwire Blog" target="_blank">Blog</a></h2>
-							</header>
-							<div class="scroller" data-above="2" data-below="2">
-								<header>
-									<span class="corner"></span>
-								</header>
-								<article class="template">
-									<blockquote>
-									</blockquote>
-									<aside>
-										<mark></mark>
-										<time></time>
-									</aside>
-								</article>
-								<nav>
-									<a class="button up" href="#"><span>Up</span></a>
-									<a class="button down" href="#"><span>Down</span></a>
-								</nav>
-							</div>
-						</section>
-						<section class="flickr">
-							<header>
-								<h2><a href="http://flickr.com/photos/soulwire" title="Soulwire Photo Stream" target="_blank">Flickr</a></h2>
-							</header>
-							<div class="scroller" data-above="2" data-below="2">
-								<header>
-									<span class="caption">
-										<strong></strong>
-										<em></em>
-									</span>
-								</header>
-								<article class="template">
-									<blockquote>
-									</blockquote>
-									<aside>
-										<mark></mark>
-										<time></time>
-									</aside>
-								</article>
-								<nav>
-									<a class="button up" href="#"><span>Up</span></a>
-									<a class="button down" href="#"><span>Down</span></a>
-								</nav>
-							</div>
-						</section>
-					</div>
-				</div>
-			</section>
-			<!--
-				NODES
-			-->
-			<section id="nodes" data-slug="nodes" data-controller="SOULWIRE.Nodes">
-				<header>
-					<h1>Nodes</h1>
-					<h2>Other places I hang out in</h2>
-				</header>
-				<ul class="hub social">
-					<strong>Find me on&hellip;</strong>
-					<li class="twitter"><a href="http://twitter.com/soulwire/" target="_blank"><span>Twitter</span></a></li>
-					<li class="linkedin"><a href="http://www.linkedin.com/in/soulwire/" target="_blank"><span>Linked in</span></a></li>
-					<li class="plus"><a href="https://plus.google.com/104663849249011879980/" target="_blank"><span>Google +</span></a></li>
-					<li class="blog"><a href="http://blog.soulwire.co.uk/" target="_blank"><span>My Blog</span></a></li>
-					<li class="vimeo"><a href="http://vimeo.com/soulwire/" target="_blank"><span>Vimeo</span></a></li>
-					<li class="email"><a href="#" target="_blank"><span>Email</span></a></li>
-					<li class="flickr"><a href="http://flickr.com/photos/soulwire/" target="_blank"><span>Flickr</span></a></li>
-					<li class="jsdoit"><a href="http://jsdo.it/soulwire/codes/" target="_blank"><span>jsdo.it</span></a></li>
-					<li class="dspn"><a href="http://designspiration.net/soulwire/" target="_blank"><span>DSPN</span></a></li>
-					<li class="visualize"><a href="http://vi.sualize.us/transcomputable/" target="_blank"><span>visualize</span></a></li>
-					<li class="github"><a href="http://github.com/soulwire/" target="_blank"><span>Github</span></a></li>
-				</ul>
-			</section>
-			<!-- PAGINATION -->
-			<nav class="pagination">
-				<ul>
-					<li class="prev"><a href="#" title="Previous Page">Previous Page</a></li>
-					<li class="next"><a href="#" title="Next Page">Next Page</a></li>
-				</ul>
-			</nav>
-		</div>
-		<aside id="discussion" class="disabled closed">
-			<a href="#" class="toggle"></a>
-			<div class="content">
-				<div id="disqus_thread"></div>
-			</div>
-		</aside>
-		<!--
-			SHARE
-		-->
-		<aside class="share">
-			<ul>
-				<li class="twitter">
-					<span class="icon"><em>Share this on Twitter</em></span>
-					<span class="text">
-						<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://soulwire.co.uk" data-text="Experiments in Code &raquo;" data-count="horizontal" data-via="soulwire">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-					</span>
-				</li>
-				<li class="google">
-					<span class="icon"><em>Google Plus 1</em></span>
-					<span class="text"><g:plusone size="medium" href="http://soulwire.co.uk"></g:plusone></span>
-				</li>
-				<li class="facebook">
-					<span class="icon"><em>Like this on Facebook</em></span>
-					<span class="text"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsoulwire.co.uk&amp;layout=button_count&amp;show_faces=true&amp;width=110&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe></span>
-				</li>
-			</ul>
-		</aside>
-		<!--
-			FOOTER
-		-->
-		<footer id="footer">
-			<nav class="disabled">
-					<a class="button down" title="Experiments" href="/experiments/"><span>Experiments</span></a>
-					<p><em>Check out my</em> <strong>Experiments</strong></p>
-			</nav>
-			<p class="about"><a href="http://soulwire.co.uk">soulwire</a> &copy;MMXII - Justin Windle</p>
-			<p class="info" title="Navigate using your mouse &amp; Keyboard"></p>
-		</footer>
-		<!--
-			SHIT BROWSER WARNING
-		-->
-		<aside class="shitbrowser hidden">
-			<p><strong>I'm sorry to inform you that your browser sucks :(</strong> This site uses features that <em>require</em> a modern browser - why not try <a href="http://www.google.com/chrome/" target="_blank" title="Download Chrome">Chrome</a>?</p>
-		</aside>
-		<!-- SCRIPTS -->
-		<!-- Libraries -->
-		<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-		<!-- <block output="/js/scripts.min.js"> -->
-		<script src="/js/lib/jquery.easing.1.3.js"></script>
-		<script src="/js/lib/requestanimationframe.js"></script>
-		<!-- Plugins -->
-		<script src="/js/plugins/pushtext.js"></script>
-		<script src="/js/plugins/slicer.js"></script>
-		<!-- Namespace -->
-		<script src="/js/SOULWIRE.js"></script>
-		<!-- Section Controllers -->
-		<script src="/js/controller/SOULWIRE.AbstractController.js"></script>
-		<script src="/js/controller/SOULWIRE.Introduction.js"></script>
-		<script src="/js/controller/SOULWIRE.Experiments.js"></script>
-		<script src="/js/controller/SOULWIRE.Stream.js"></script>
-		<script src="/js/controller/SOULWIRE.Nodes.js"></script>
-		<script src="/js/controller/SOULWIRE.Discussion.js"></script>
-		<!-- Components -->
-		<script src="/js/component/SOULWIRE.SlideShow.js"></script>
-		<script src="/js/component/SOULWIRE.Scroller.js"></script>
-		<!-- Models -->
-		<script src="/js/model/SOULWIRE.Twitter.js"></script>
-		<script src="/js/model/SOULWIRE.Wordpress.js"></script>
-		<script src="/js/model/SOULWIRE.Flickr.js"></script>
-		<!-- Visuals -->
-		<script src="/js/display/SOULWIRE.Particles.js"></script>
-		<script src="/js/display/SOULWIRE.Parallax.js"></script>
-		<!-- Utilities -->
-		<script src="/js/utils/SOULWIRE.DateUtils.js"></script>
-		<!-- Core -->
-		<script src="/js/SOULWIRE.SectionController.js"></script>
-		<script src="/js/SOULWIRE.SectionMenu.js"></script>
-		<script src="/js/SOULWIRE.SectionScroll.js"></script>
-		<script src="/js/SOULWIRE.Signals.js"></script>
-		<script src="/js/SOULWIRE.Footer.js"></script>
-		<!-- Startup -->
-		<script src="/js/bootstrap.js"></script>
-		<!-- </block> -->
-		<script>
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-		<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-			{lang: 'en-GB'}
-		</script>
-	</body>
+    -->
+    <body>
+        <!--
+            HEADER
+        -->
+        <header id="header">
+            <h1>
+                <a href="http://soulwire.co.uk" title="Soulwire (Justin Windle)">Soulwire &raquo; Justin Windle</a>
+            </h1>
+            <hgroup class="hidden">
+                <h2>Experiments in code</h2>
+                <h3>Interactive developer</h3>
+            </hgroup>
+            <nav id="sectionMenu">
+                <a href="/hello" title="A quick introduction">Hello</a>
+                <a href="/experiments" title="Experiments in code">Experiments</a>
+                <a href="/stream" title="My activity stream">Stream</a>
+                <a href="/nodes" title="Where else to find me">Nodes</a>
+            </nav>
+            <a class="button close hidden" href="#"><span>Close</span></a>
+            <div class="colour"></div>
+        </header>
+        <div id="sections">
+            <!--
+                INTRODUCTION
+            -->
+            <section id="hello" data-slug="hello" data-controller="SOULWIRE.Introduction">
+                <header>
+                    <h1>Justin Windle</h1>
+                    <h2>Interactive Developer</h2>
+                </header>
+                <article class="introduction">
+                    <hgroup>
+                        <h2><span>Hello</span></h2>
+                        <h3><span>How's it going? My name is Justin</span></h3>
+                        <h4><span>I'm an interactive developer</span></h4>
+                        <h5><span>I work with <a href="http://qwiki.com/" target="_blank">Qwiki</a>, NYC</span></h5>
+                        <h6><span>I'm from England</span></h6>
+                    </hgroup>
+                    <dl>
+                        <dt>I like</dt>
+                        <dd>
+                            <ul>
+                                <li>Actionscript</li>
+                                <li>Ambient Music</li>
+                                <li>Animation</li>
+                                <li>Cycling</li>
+                                <li>Design</li>
+                                <li>Drawing</li>
+                                <li>Drumming</li>
+                                <li>Generative Art</li>
+                                <li>Illustration</li>
+                                <li>Javascript</li>
+                                <li>Open Frameworks</li>
+                                <li>Processing</li>
+                                <li>Programming</li>
+                                <li>Physics</li>
+                                <li>Spicy Food</li>
+                                <li>Strong Coffee</li>
+                                <li>Typography</li>
+                                <li>WebGL</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <figure>
+                        <ul>
+                            <li><img src="/img/mugshots/justin-windle-001.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-002.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-003.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-004.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-005.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-006.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-007.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-008.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-009.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-010.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-011.jpg"/></li>
+                            <li><img src="/img/mugshots/justin-windle-012.jpg"/></li>
+                        </ul>
+                    </figure>
+                </article>
+            </section>
+            <!--
+                EXPERIMENTS
+            -->
+            <section id="experiments" class="scroll-x" data-slug="experiments" data-controller="SOULWIRE.Experiments">
+                <header>
+                    <h1>Experiments</h1>
+                    <h2>Things I do with code in my spare time</h2>
+                </header>
+                <div class="scroll-x">
+                    <div class="container-x">
+                        <!--
+                            TENTACLES
+                        -->
+                        <article id="muscular-hydrostats" class="new" data-slug="muscular-hydrostats" data-content="http://soulwire.github.com/Muscular-Hydrostats/" data-color="#283442" data-comments="true">
+                          <figure>
+                            <div class="slideshow">
+                              <ul>
+                                <li><img src="/img/experiments/muscular-hydrostats/muscular-hydrostats-001.jpg" alt="muscular-hydrostats"></li>
+                                <li><img src="/img/experiments/muscular-hydrostats/muscular-hydrostats-002.jpg" alt="muscular-hydrostats"></li>
+                                <li><img src="/img/experiments/muscular-hydrostats/muscular-hydrostats-003.jpg" alt="muscular-hydrostats"></li>
+                                <li><img src="/img/experiments/muscular-hydrostats/muscular-hydrostats-004.jpg" alt="muscular-hydrostats"></li>
+                              </ul>
+                            </div>
+                          </figure>
+                          <header>
+                            <hgroup>
+                              <h2><a class="open" href="/experiments/muscular-hydrostats/" title="Muscular Hydrostats">Muscular Hydrostats</a></h2>
+                              <h3><a class="open" href="/experiments/muscular-hydrostats/" title="Tentacle simulation using inverse kinematics">Tentacle simulation using inverse kinematics</a></h3>
+                            </hgroup>
+                          </header>
+                          <div class="details">
+                            <dl>
+                              <dt>Concept</dt><dd>An attempt to simulate the tentacles of a living organism.</dd>
+                              <dt>Toolkit</dt><dd>JavaScript, Canvas, Inverse Kinematics, Sketch.js, dat.GUI</dd>
+                            </dl>
+                            <a class="button view open" href="#"><span>View Experiment</span></a>
+                          </div>
+                        </article>
+                        <!--
+                            MAKISU
+                        -->
+                        <article id="makisu" data-slug="makisu" data-content="http://soulwire.github.com/Makisu/" data-color="#f5f5f5" data-comments="true">
+                          <figure>
+                            <div class="slideshow">
+                              <ul>
+                                <li><img src="/img/experiments/makisu/makisu-001.jpg" alt="Makisu"></li>
+                                <li><img src="/img/experiments/makisu/makisu-002.jpg" alt="Makisu"></li>
+                              </ul>
+                            </div>
+                          </figure>
+                          <header>
+                            <hgroup>
+                              <h2><a class="open" href="/experiments/makisu/" title="Makisu">Makisu</a></h2>
+                              <h3><a class="open" href="/experiments/makisu/" title="CSS 3D Dropdown Concept">CSS 3D Dropdown Concept</a></h3>
+                            </hgroup>
+                          </header>
+                          <div class="details">
+                            <dl>
+                              <dt>Concept</dt><dd>An experimental dropdown concept using CSS 3D. This was inspired by the Makisu bamboo mat used in Japanese cooking.</dd>
+                              <dt>Toolkit</dt><dd>JavaScript, CSS 3D</dd>
+                            </dl>
+                            <a class="button view open" href="#"><span>View Experiment</span></a>
+                          </div>
+                        </article>
+                        <!--
+                            TIME CAMERA
+                        -->
+                        <article id="time-camera" data-slug="time-camera" data-content="/data/experiments/time-camera/" data-color="#f5f5f5" data-comments="true">
+                          <figure>
+                            <div class="slideshow">
+                              <ul>
+                                <li><img src="/img/experiments/time-camera/time-camera-001.jpg" alt="Time Camera"></li>
+                                <li><img src="/img/experiments/time-camera/time-camera-002.jpg" alt="Time Camera"></li>
+                                <li><img src="/img/experiments/time-camera/time-camera-003.jpg" alt="Time Camera"></li>
+                                <li><img src="/img/experiments/time-camera/time-camera-004.jpg" alt="Time Camera"></li>
+                                <li><img src="/img/experiments/time-camera/time-camera-005.jpg" alt="Time Camera"></li>
+                              </ul>
+                            </div>
+                          </figure>
+                          <header>
+                            <hgroup>
+                              <h2><a class="open" href="/experiments/time-camera/" title="Time Camera">Time Camera</a></h2>
+                              <h3><a class="open" href="/experiments/time-camera/" title="Time Based Camera Using Canvas and WebRTC">Time Based Camera Using Canvas and WebRTC</a></h3>
+                            </hgroup>
+                          </header>
+                          <div class="details">
+                            <dl>
+                              <dt>Concept</dt><dd>A 15 minute hack, inspired by the slit scan photography of Jay Mark Johnson which "emphasizes time over space"</dd>
+                              <dt>Toolkit</dt><dd>JavaScript, WebRTC, Canvas</dd>
+                            </dl>
+                            <a class="button view open" href="#"><span>View Experiment</span></a>
+                          </div>
+                        </article>
+                        <!--
+                            CRYSTALLIZATION
+                        -->
+                        <article id="crystallization" data-slug="crystallization" data-content="/data/experiments/crystallization/" data-color="#f5f5f5" data-comments="true">
+                          <figure>
+                            <div class="slideshow">
+                              <ul>
+                                <li><img src="/img/experiments/crystallization/crystallization-001.jpg" alt="Crystallization"></li>
+                                <li><img src="/img/experiments/crystallization/crystallization-002.jpg" alt="Crystallization"></li>
+                                <li><img src="/img/experiments/crystallization/crystallization-003.jpg" alt="Crystallization"></li>
+                                <li><img src="/img/experiments/crystallization/crystallization-004.jpg" alt="Crystallization"></li>
+                                <li><img src="/img/experiments/crystallization/crystallization-005.jpg" alt="Crystallization"></li>
+                              </ul>
+                            </div>
+                          </figure>
+                          <header>
+                            <hgroup>
+                              <h2><a class="open" href="/experiments/crystallization/" title="Crystallization">Crystallization</a></h2>
+                              <h3><a class="open" href="/experiments/crystallization/" title="Recursive Subdivision with Canvas and JavaScript">Recursive Subdivision with Canvas and JavaScript</a></h3>
+                            </hgroup>
+                          </header>
+                          <div class="details">
+                            <dl>
+                              <dt>Concept</dt><dd>A JavaScript, CoffeeScript &amp; canvas implementation of an old Flash experiment exploring the recursive subdivision of polygons</dd>
+                              <dt>Toolkit</dt><dd>JavaScript, CoffeeScript, Canvas</dd>
+                            </dl>
+                            <a class="button view open" href="#"><span>View Experiment</span></a>
+                          </div>
+                        </article>
+                        <!--
+                            WORM
+                        -->
+                        <article id="worm" data-slug="worm" data-content="/data/experiments/worm/" data-color="#1A1A1A" data-comments="true">
+                          <figure>
+                            <div class="slideshow">
+                              <ul>
+                                <li><img src="/img/experiments/worm/worm-001.jpg" alt="Coffee Physics"></li>
+                                <li><img src="/img/experiments/worm/worm-002.jpg" alt="Coffee Physics"></li>
+                                <li><img src="/img/experiments/worm/worm-003.jpg" alt="Coffee Physics"></li>
+                                <li><img src="/img/experiments/worm/worm-004.jpg" alt="Coffee Physics"></li>
+                                <li><img src="/img/experiments/worm/worm-005.jpg" alt="Coffee Physics"></li>
+                              </ul>
+                            </div>
+                          </figure>
+                          <header>
+                            <hgroup>
+                              <h2><a class="open" href="/experiments/worm/" title="Worm Toy">Worm Mouse Toy</a></h2>
+                              <h3><a class="open" href="/experiments/worm/" title="Playing with Spring Physics">Playing with Spring Physics</a></h3>
+                            </hgroup>
+                          </header>
+                          <div class="details">
+                            <dl>
+                              <dt>Concept</dt><dd>Whilst working on some sketches for tail physics, I found some interesting glitches in not quite complete spring physics. So I ran with it.</dd>
+                              <dt>Toolkit</dt><dd>JavaScript, Canvas, Spring Physics</dd>
+                            </dl>
+                            <a class="button view open" href="#"><span>View Experiment</span></a>
+                          </div>
+                        </article>
+                        <!--
+                            COFFEE PHYSICS
+                        -->
+                        <article id="coffee-physics" data-slug="coffee-physics" data-content="http://soulwire.github.com/Coffee-Physics/" data-color="#1A1A1A" data-comments="true">
+                          <figure>
+                            <div class="slideshow">
+                              <ul>
+                                <li><img src="/img/experiments/coffee-physics/coffee-physics-001.jpg" alt="Coffee Physics"></li>
+                                <li><img src="/img/experiments/coffee-physics/coffee-physics-002.jpg" alt="Coffee Physics"></li>
+                                <li><img src="/img/experiments/coffee-physics/coffee-physics-003.jpg" alt="Coffee Physics"></li>
+                                <li><img src="/img/experiments/coffee-physics/coffee-physics-004.jpg" alt="Coffee Physics"></li>
+                                <li><img src="/img/experiments/coffee-physics/coffee-physics-005.jpg" alt="Coffee Physics"></li>
+                              </ul>
+                            </div>
+                          </figure>
+                          <header>
+                            <hgroup>
+                              <h2><a class="open" href="/experiments/coffee-physics/" title="Coffee Physics">Coffee Physics</a></h2>
+                              <h3><a class="open" href="/experiments/coffee-physics/" title="Lightweight CoffeeScript Physics Engine">Lightweight CoffeeScript Physics Engine</a></h3>
+                            </hgroup>
+                          </header>
+                          <div class="details">
+                            <dl>
+                              <dt>Concept</dt><dd>During my <a href="http://www.fitc.ca/">FITC</a> talk I released the <a href="https://github.com/soulwire/Coffee-Physics/" title="CoffeePhysics">CoffeePhysics</a> library and a series of <a href="http://soulwire.github.com/Coffee-Physics/" title="CoffeePhysics demos">demos</a> featuring particles, springs, customizable behaviors and multiple integrators and renderers. Check out the <a href="https://github.com/soulwire/Coffee-Physics/" title="CoffeePhysics">GitHub project</a> for more information.</dd>
+                              <dt>Toolkit</dt><dd>JavaScript, Canvas, WebGL</dd>
+                            </dl>
+                            <a class="button view open" href="#"><span>View Experiment</span></a>
+                          </div>
+                        </article>
+                        <!--
+                            RECURSION TOY
+                        -->
+                        <article id="recursion-toy" data-slug="recursion-toy" data-content="/data/experiments/recursion-toy/" data-color="#f2f2f2" data-comments="true">
+                          <figure>
+                            <div class="slideshow">
+                              <ul>
+                                <li><img src="/img/experiments/recursion-toy/recursion-toy-001.jpg" alt="Recursion Toy"></li>
+                                <li><img src="/img/experiments/recursion-toy/recursion-toy-002.jpg" alt="Recursion Toy"></li>
+                                <li><img src="/img/experiments/recursion-toy/recursion-toy-003.jpg" alt="Recursion Toy"></li>
+                                <li><img src="/img/experiments/recursion-toy/recursion-toy-004.jpg" alt="Recursion Toy"></li>
+                                <li><img src="/img/experiments/recursion-toy/recursion-toy-005.jpg" alt="Recursion Toy"></li>
+                              </ul>
+                            </div>
+                          </figure>
+                          <header>
+                            <hgroup>
+                              <h2><a class="open" href="/experiments/recursion-toy/" title="Recursion Toy">Super Recursion Toy</a></h2>
+                              <h3><a class="open" href="/experiments/recursion-toy/" title="Explore Branching Algorithms">Exploring Branching Algorithms</a></h3>
+                            </hgroup>
+                          </header>
+                          <div class="details">
+                            <dl>
+                              <dt>Concept</dt><dd>Revisiting one of my favorite topics - recursion. This canvas based tool alows you to explore branching algorithms &amp; rendering techniques, as well as save a snapshot of your creations. It's also <a href="https://github.com/soulwire/Recursion-Toy" target="_blank">open source</a>, which is always nice&hellip;</dd>
+                              <dt>Toolkit</dt><dd>JavaScript, Canvas, <a href="http://code.google.com/p/dat-gui/" target="_blank">Dat.GUI</a></dd>
+                            </dl>
+                            <a class="button view open" href="#"><span>View Experiment</span></a>
+                          </div>
+                        </article>
+                        <!--
+                            MUSHROOM CORAL
+                        -->
+                        <article id="generative-coral-patterns" data-slug="generative-coral-patterns" data-content="/data/experiments/mushroom-coral/" data-color="#f2f2f2" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-001.jpg" alt="Mushroom Coral"></li>
+                                        <li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-002.jpg" alt="Mushroom Coral"></li>
+                                        <li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-003.jpg" alt="Mushroom Coral"></li>
+                                        <li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-004.jpg" alt="Mushroom Coral"></li>
+                                        <li><img src="/img/experiments/generative-coral-patterns/generative-coral-patterns-005.jpg" alt="Mushroom Coral"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/generative-coral-patterns/" title="Mushroom Coral">Mushroom Coral</a></h2>
+                                    <h3><a class="open" href="/experiments/generative-coral-patterns/" title="Generative Coral Patterns">Generative Coral Patterns</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Simulating patterns found in nature, such as those seen in certain types of coral. These forms are generated using the numbers from the <a href="http://en.wikipedia.org/wiki/Perlin_noise" target="_blank">Perlin Noise</a> algorithm and applying them to repeating textures</dd>
+                                    <dt>Toolkit</dt><dd>Actionscript 3.0, Flash, Perlin Noise</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            PRIMORDIAL SOUP
+                        -->
+                        <article id="primordial-soup" data-slug="primordial-soup" data-content="/data/experiments/primordial-soup/" data-color="#f5f5f5" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/primordial-soup/primordial-soup-001.jpg" alt="Primordial Soup"></li>
+                                        <li><img src="/img/experiments/primordial-soup/primordial-soup-002.jpg" alt="Primordial Soup"></li>
+                                        <li><img src="/img/experiments/primordial-soup/primordial-soup-003.jpg" alt="Primordial Soup"></li>
+                                        <li><img src="/img/experiments/primordial-soup/primordial-soup-004.jpg" alt="Primordial Soup"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/primordial-soup/" title="Primordial Soup">Primordial Soup</a></h2>
+                                    <h3><a class="open" href="/experiments/primordial-soup/" title="Generative Locomotion Study">Generative Locomotion of Autonomous Agents</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Generative, autonomous creatures inhabit a viscous liquid. Their survival depends on their ability to move, which is determined by their DNA as they evolve through the generations. Locomotion is determined by interactions between body segments.</dd>
+                                    <dt>Toolkit</dt><dd>JavaScript, Spring Physics, Canvas</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            BIT BASED WANDER
+                        -->
+                        <article id="bit-based-wander" data-slug="bit-based-wander" data-content="/data/experiments/bit-based-wander/" data-color="#f2f2f2" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/bit-based-wander/bit-based-wander-001.jpg" alt="Bit Based Wander"></li>
+                                        <li><img src="/img/experiments/bit-based-wander/bit-based-wander-002.jpg" alt="Bit Based Wander"></li>
+                                        <li><img src="/img/experiments/bit-based-wander/bit-based-wander-003.jpg" alt="Bit Based Wander"></li>
+                                        <li><img src="/img/experiments/bit-based-wander/bit-based-wander-004.jpg" alt="Bit Based Wander"></li>
+                                        <li><img src="/img/experiments/bit-based-wander/bit-based-wander-005.jpg" alt="Bit Based Wander"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/bit-based-wander/" title="Bit Based Wander">Bit Based Wander</a></h2>
+                                    <h3><a class="open" href="/experiments/bit-based-wander/" title="2D Wander Algorithm Powered by Bits &amp; Bytes">2D Wander Algorithm Powered by Bits &amp; Bytes</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Continuing with my bit / byte visualisation experiments, this sketch uses the 8 bits of each byte in the dragged file to propel autonomous wandering agents along in 2D space</dd>
+                                    <dt>Toolkit</dt><dd>JavaScript, File API, Drag & Drop, Canvas</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <article id="triangulation" data-slug="triangulation" data-content="/data/experiments/triangulation/" data-color="#f5f5f5" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/triangulation/triangulation-001.jpg" alt="Trendy Triangulation"></li>
+                                        <li><img src="/img/experiments/triangulation/triangulation-002.jpg" alt="Trendy Triangulation"></li>
+                                        <li><img src="/img/experiments/triangulation/triangulation-003.jpg" alt="Trendy Triangulation"></li>
+                                        <li><img src="/img/experiments/triangulation/triangulation-004.jpg" alt="Trendy Triangulation"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/triangulation/" title="Triangulations">Triangulations</a></h2>
+                                    <h3><a class="open" href="/experiments/triangulation/" title="Trendy Illustration Generator">Trendy Illustration Generator</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>It's become quite the vogue lately to triangulate everything. If you're not generating ideas yourself, then you may as well not bother executing them yourself either! Simply generate endless trendy triangulations with this little experiment...</dd>
+                                    <dt>Toolkit</dt><dd>Actionscript 3.0, Flash, Delaunay Triangulation, Felt-Tip Pens, Pencils</dd>
+                                </dl>
+                                <a class="button view open" href="#"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            SHOW ME YOUR BITS
+                        -->
+                        <article id="show-me-your-bits" data-slug="show-me-your-bits" data-content="/data/experiments/show-me-your-bits/" data-color="#fff" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/show-me-your-bits/show-me-your-bits-001.jpg" alt="Show Me Your Bits"></li>
+                                        <li><img src="/img/experiments/show-me-your-bits/show-me-your-bits-002.jpg" alt="Show Me Your Bits"></li>
+                                        <li><img src="/img/experiments/show-me-your-bits/show-me-your-bits-003.jpg" alt="Show Me Your Bits"></li>
+                                        <li><img src="/img/experiments/show-me-your-bits/show-me-your-bits-004.jpg" alt="Show Me Your Bits"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/show-me-your-bits/" title="Show Me Your Bits">Show Me Your Bits</a></h2>
+                                    <h3><a class="open" href="/experiments/show-me-your-bits/" title="Fundamentalist Data Visualisation">Fundamentalist Data Visualisation</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>It's now possible to read local files in JavaScript, without the client-server round trip. To celebrate, I decided to work on some small experiments which visualise the bits and bytes of the files you drop onto them...</dd>
+                                    <dt>Toolkit</dt><dd>JavaScript, File API, Drag &amp; Drop, Canvas</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            FRAGMENTED MESH
+                        -->
+                        <article id="fragmented-mesh" data-slug="fragmented-mesh" data-content="/data/experiments/fragmented-mesh/" data-color="#111" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/fragmented-mesh/fragmented-mesh-001.jpg" alt="Fragmented Mesh"></li>
+                                        <li><img src="/img/experiments/fragmented-mesh/fragmented-mesh-002.jpg" alt="Fragmented Mesh"></li>
+                                        <li><img src="/img/experiments/fragmented-mesh/fragmented-mesh-003.jpg" alt="Fragmented Mesh"></li>
+                                        <li><img src="/img/experiments/fragmented-mesh/fragmented-mesh-004.jpg" alt="Fragmented Mesh"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/fragmented-mesh/" title="Fragmented Mesh">Fragmented WebGL Mesh</a></h2>
+                                    <h3><a class="open" href="/experiments/fragmented-mesh/" title="Noise-Reactive Particle Sphere">Geometry Exploding in Slow Motion</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Fragmented faces of a 3D mesh exploding in slow motion. This was a quick test with WebGL and the <a href="https://github.com/mrdoob/three.js" target="_blank">THREE.js</a> library</dd>
+                                    <dt>Toolkit</dt><dd>JavaScript, WebGL, ThreeJS</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            NOISE SPHERE
+                        -->
+                        <article id="noise-reactive-particle-sphere" data-slug="noise-reactive-particle-sphere" data-content="http://player.vimeo.com/video/20266917?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" data-color="#222" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/noise-reactive-particle-sphere/noise-sphere-001.jpg" alt="Noise-Reactive Particle Sphere"></li>
+                                        <li><img src="/img/experiments/noise-reactive-particle-sphere/noise-sphere-002.jpg" alt="Noise-Reactive Particle Sphere"></li>
+                                        <li><img src="/img/experiments/noise-reactive-particle-sphere/noise-sphere-003.jpg" alt="Noise-Reactive Particle Sphere"></li>
+                                        <li><img src="/img/experiments/noise-reactive-particle-sphere/noise-sphere-004.jpg" alt="Noise-Reactive Particle Sphere"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/noise-reactive-particle-sphere/" title="Noise-Reactive Particle Sphere">Noise-Reactive Particle Sphere</a></h2>
+                                    <h3><a class="open" href="/experiments/noise-reactive-particle-sphere/" title="Noise-Reactive Particle Sphere">Experimenting with C++, Cinder & OpenGL</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Playing with Cinder, the geometry of a sphere mesh is displaced based on audio data. Each vertex is rendered as a particle. Sorry for the bad video quality - maybe I'll convert it to WebGL one day soon :)</dd>
+                                    <dt>Toolkit</dt><dd>C++, Cinder, OpenGL</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            WHAT THE FUCK IS MY MASHUP
+                        -->
+                        <article id="what-the-fuck-is-my-mashup" data-slug="what-the-fuck-is-my-mashup" data-content="http://whatthefuckismymashup.com" data-color="#FFF" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/what-the-fuck-is-my-mashup/what-the-fuck-is-my-mashup-001.jpg" alt="What The Fuck Is My Mashup?"></li>
+                                        <li><img src="/img/experiments/what-the-fuck-is-my-mashup/what-the-fuck-is-my-mashup-002.jpg" alt="What The Fuck Is My Mashup?"></li>
+                                        <li><img src="/img/experiments/what-the-fuck-is-my-mashup/what-the-fuck-is-my-mashup-003.jpg" alt="What The Fuck Is My Mashup?"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/what-the-fuck-is-my-mashup/" title="What The Fuck Is My Mashup?">What The Fuck Is My Mashup?</a></h2>
+                                    <h3><a class="open" href="/experiments/what-the-fuck-is-my-mashup/" title="What The Fuck Is My Mashup?">Mashup idea generator for uninspired developers</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Inspired by <a href="http://www.whatthefuckshouldimakefordinner.com/">WTFSIMFD</a>, <a href="http://whatthefuckismymashup.com" target="_blank">What The Fuck Is My Mashup</a> is a JavaScript based randomiser that takes a series of templates &amp; a corpus of words &amp; turns them into ridiculous concepts that utilise the latest technologies, APIs &amp; social media platforms!</dd>
+                                    <dt>Toolkit</dt><dd>JavaScript, NodeJS</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            PARTICLE SEQUENCER
+                        -->
+                        <article id="particle-node-sequencer" data-slug="particle-node-sequencer" data-content="/data/experiments/particle-node-sequencer/" data-color="#222" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/particle-node-sequencer/sequencer-001.jpg" alt="Particle Node Sequencer"></li>
+                                        <li><img src="/img/experiments/particle-node-sequencer/sequencer-002.jpg" alt="Particle Node Sequencer"></li>
+                                        <li><img src="/img/experiments/particle-node-sequencer/sequencer-003.jpg" alt="Particle Node Sequencer"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/particle-node-sequencer/" title="Particle Node Sequencer">Particle Node Sequencer</a></h2>
+                                    <h3><a class="open" href="/experiments/particle-node-sequencer/" title="Particle Node Sequencer">Generative music based around nodes &amp; proximity</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Exploring the physical interactions between particles as they generate rhythmic and unique musical compositions. This experiment inspired the iOS app, <a href="http://www.nodebeat.com" title="NodeBeat" target="_blank">NodeBeat</a></dd>
+                                    <dt>Toolkit</dt><dd>Flash, Audio DSP, <a href="http://code.google.com/p/tonfall/">Tonfall</a></dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            RECURSIVE POLYGON SUBDIVISION
+                        -->
+                        <article id="recursive-polygon-subdivision" data-slug="recursive-polygon-subdivision" data-content="/data/experiments/recursive-polygon-subdivision/" data-color="#f5f5f5" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-001.jpg" alt="Recursive Polygon Subdivision"></li>
+                                        <li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-002.jpg" alt="Recursive Polygon Subdivision"></li>
+                                        <li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-003.jpg" alt="Recursive Polygon Subdivision"></li>
+                                        <li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-004.jpg" alt="Recursive Polygon Subdivision"></li>
+                                        <li><img src="/img/experiments/recursive-polygon-subdivision/recursive-polygon-subdivision-005.jpg" alt="Recursive Polygon Subdivision"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/recursive-polygon-subdivision/" title="Recursive Polygon Subdivision">Recursive Polygon Subdivision</a></h2>
+                                    <h3><a class="open" href="/experiments/recursive-polygon-subdivision/" title="Experimenting with a 2D Polygon Subdivision Algorithm">Experimenting with a 2D Polygon Subdivision Algorithm</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Split a convex polygon between two line segments, creating two new polygons. Each new polygon is then pushed into a queue, ready to be subdivided itself. A simple algorithm but with complex looking results.</dd>
+                                    <dt>Toolkit</dt><dd>Actionscript 3.0, Flash</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            SMACK MY GLITCH UP
+                        -->
+                        <article id="smack-my-glitch-up" data-slug="smack-my-glitch-up" data-content="/data/experiments/smack-my-glitch-up/" data-color="#f5f5f5" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/smack-my-glitch-up/smack-my-glitch-up-001.jpg" alt="Smack My Glitch Up"></li>
+                                        <li><img src="/img/experiments/smack-my-glitch-up/smack-my-glitch-up-002.jpg" alt="Smack My Glitch Up"></li>
+                                        <li><img src="/img/experiments/smack-my-glitch-up/smack-my-glitch-up-003.jpg" alt="Smack My Glitch Up"></li>
+                                        <li><img src="/img/experiments/smack-my-glitch-up/smack-my-glitch-up-004.jpg" alt="Smack My Glitch Up"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/smack-my-glitch-up" title="Smack My Glitch Up">Smack My Glitch Up</a></h2>
+                                    <h3><a class="open" href="/experiments/smack-my-glitch-up" title="AS3 BitmapData Glitch Generator">AS3 BitmapData Glitch Generator</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Generate endless beautiful glitches from your otherwise too perfect images. This generative tool works by rearranging the bytes in an image, causing beautiful chaos.</dd>
+                                    <dt>Toolkit</dt><dd>Actionscript 3.0, ByteArray</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>http://lab.soulwire.co.uk.local:8888/
+                            </div>
+                        </article>
+                        <!--
+                            PIXEL BENDER TENTACLES
+                        -->
+                        <article id="pixel-bender-tentacles" data-slug="pixel-bender-tentacles" data-content="/data/experiments/pixel-bender-tentacles/" data-color="#fff" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/pixel-bender-tentacles/pixel-bender-tentacles-001.jpg" alt="Pixel Bender Tentacles"></li>
+                                        <li><img src="/img/experiments/pixel-bender-tentacles/pixel-bender-tentacles-002.jpg" alt="Pixel Bender Tentacles"></li>
+                                        <li><img src="/img/experiments/pixel-bender-tentacles/pixel-bender-tentacles-003.jpg" alt="Pixel Bender Tentacles"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/pixel-bender-tentacles" title="Pixel Bender Tentacles">Pixel Bender Tentacles</a></h2>
+                                    <h3><a class="open" href="/experiments/pixel-bender-tentacles" title="Experimenting with Pixel Bender in Flash Player 10">Experimenting with Pixel Bender in Flash Player 10</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>Recursive growth algorithm explored through tentacles and optimised by using Pixel Bender for trigonometric functions</dd>
+                                    <dt>Toolkit</dt><dd>Actionscript 3.0, Pixel Bender, Recursion</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                        <!--
+                            FLIPPING YOU THE BOID
+                        -->
+                        <article id="flipping-you-the-boid" data-slug="flipping-you-the-boid" data-content="/data/experiments/flipping-you-the-boid/" data-color="#fff" data-comments="true">
+                            <figure>
+                                <div class="slideshow">
+                                    <ul>
+                                        <li><img src="/img/experiments/flipping-you-the-boid/flipping-you-the-boid-001.jpg" alt="Flipping you the Boid"></li>
+                                        <li><img src="/img/experiments/flipping-you-the-boid/flipping-you-the-boid-002.jpg" alt="Flipping you the Boid"></li>
+                                        <li><img src="/img/experiments/flipping-you-the-boid/flipping-you-the-boid-003.jpg" alt="Flipping you the Boid"></li>
+                                        <li><img src="/img/experiments/flipping-you-the-boid/flipping-you-the-boid-004.jpg" alt="Flipping you the Boid"></li>
+                                    </ul>
+                                </div>
+                            </figure>
+                            <header>
+                                <hgroup>
+                                    <h2><a class="open" href="/experiments/flipping-you-the-boid" title="Flipping you the Boid">Flipping you the Boid</a></h2>
+                                    <h3><a class="open" href="/experiments/flipping-you-the-boid" title="AS3 Flocking &amp; Steering Behaviors">AS3 Flocking &amp; Steering Behaviors</a></h3>
+                                </hgroup>
+                            </header>
+                            <div class="details">
+                                <dl>
+                                    <dt>Concept</dt><dd>When Flash Player 10 was released with the new native Vector3D and Matrix3D Classes, I decided to use them to simulate some traditional (and some new) flocking algorithms</dd>
+                                    <dt>Toolkit</dt><dd>Actionscript 3.0, Flash Player 10</dd>
+                                </dl>
+                                <a class="button view open" href="#" title="View Experiment"><span>View Experiment</span></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!--
+                ACTIVITY STREAM
+            -->
+            <section id="stream" data-slug="stream" data-controller="SOULWIRE.Stream">
+                <header>
+                    <h1>Activity Stream</h1>
+                    <h2>My diverse and amazingly interesting feeds</h2>
+                </header>
+                <div class="scroll-x">
+                    <div class="container-x">
+                        <section class="twitter">
+                            <header>
+                                <h2><a href="http://twitter.com/soulwire" title="Follow me on Twitter" target="_blank">Follow</a></h2>
+                            </header>
+                            <div class="scroller" data-above="2" data-below="2">
+                                <header>
+                                    <span class="corner"></span>
+                                </header>
+                                <article class="template">
+                                    <blockquote>
+                                    </blockquote>
+                                    <aside>
+                                        <mark></mark>
+                                        <time></time>
+                                    </aside>
+                                </article>
+                                <nav>
+                                    <a class="button up" href="#"><span>Up</span></a>
+                                    <a class="button down" href="#"><span>Down</span></a>
+                                </nav>
+                            </div>
+                        </section>
+                        <section class="blog">
+                            <header>
+                                <h2><a href="http://blog.soulwire.co.uk" title="Soulwire Blog" target="_blank">Blog</a></h2>
+                            </header>
+                            <div class="scroller" data-above="2" data-below="2">
+                                <header>
+                                    <span class="corner"></span>
+                                </header>
+                                <article class="template">
+                                    <blockquote>
+                                    </blockquote>
+                                    <aside>
+                                        <mark></mark>
+                                        <time></time>
+                                    </aside>
+                                </article>
+                                <nav>
+                                    <a class="button up" href="#"><span>Up</span></a>
+                                    <a class="button down" href="#"><span>Down</span></a>
+                                </nav>
+                            </div>
+                        </section>
+                        <section class="flickr">
+                            <header>
+                                <h2><a href="http://flickr.com/photos/soulwire" title="Soulwire Photo Stream" target="_blank">Flickr</a></h2>
+                            </header>
+                            <div class="scroller" data-above="2" data-below="2">
+                                <header>
+                                    <span class="caption">
+                                        <strong></strong>
+                                        <em></em>
+                                    </span>
+                                </header>
+                                <article class="template">
+                                    <blockquote>
+                                    </blockquote>
+                                    <aside>
+                                        <mark></mark>
+                                        <time></time>
+                                    </aside>
+                                </article>
+                                <nav>
+                                    <a class="button up" href="#"><span>Up</span></a>
+                                    <a class="button down" href="#"><span>Down</span></a>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <!--
+                NODES
+            -->
+            <section id="nodes" data-slug="nodes" data-controller="SOULWIRE.Nodes">
+                <header>
+                    <h1>Nodes</h1>
+                    <h2>Other places I hang out in</h2>
+                </header>
+                <ul class="hub social">
+                    <strong>Find me on&hellip;</strong>
+                    <li class="twitter"><a href="http://twitter.com/soulwire/" target="_blank"><span>Twitter</span></a></li>
+                    <li class="linkedin"><a href="http://www.linkedin.com/in/soulwire/" target="_blank"><span>Linked in</span></a></li>
+                    <li class="plus"><a href="https://plus.google.com/104663849249011879980/" target="_blank"><span>Google +</span></a></li>
+                    <li class="blog"><a href="http://blog.soulwire.co.uk/" target="_blank"><span>My Blog</span></a></li>
+                    <li class="vimeo"><a href="http://vimeo.com/soulwire/" target="_blank"><span>Vimeo</span></a></li>
+                    <li class="email"><a href="#" target="_blank"><span>Email</span></a></li>
+                    <li class="flickr"><a href="http://flickr.com/photos/soulwire/" target="_blank"><span>Flickr</span></a></li>
+                    <li class="jsdoit"><a href="http://jsdo.it/soulwire/codes/" target="_blank"><span>jsdo.it</span></a></li>
+                    <li class="dspn"><a href="http://designspiration.net/soulwire/" target="_blank"><span>DSPN</span></a></li>
+                    <li class="visualize"><a href="http://vi.sualize.us/transcomputable/" target="_blank"><span>visualize</span></a></li>
+                    <li class="github"><a href="http://github.com/soulwire/" target="_blank"><span>Github</span></a></li>
+                </ul>
+            </section>
+            <!-- PAGINATION -->
+            <nav class="pagination">
+                <ul>
+                    <li class="prev"><a href="#" title="Previous Page">Previous Page</a></li>
+                    <li class="next"><a href="#" title="Next Page">Next Page</a></li>
+                </ul>
+            </nav>
+        </div>
+        <aside id="discussion" class="disabled closed">
+            <a href="#" class="toggle"></a>
+            <div class="content">
+                <div id="disqus_thread"></div>
+            </div>
+        </aside>
+        <!--
+            SHARE
+        -->
+        <aside class="share">
+            <ul>
+                <li class="twitter">
+                    <span class="icon"><em>Share this on Twitter</em></span>
+                    <span class="text">
+                        <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://soulwire.co.uk" data-text="Experiments in Code &raquo;" data-count="horizontal" data-via="soulwire">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                    </span>
+                </li>
+                <li class="google">
+                    <span class="icon"><em>Google Plus 1</em></span>
+                    <span class="text"><g:plusone size="medium" href="http://soulwire.co.uk"></g:plusone></span>
+                </li>
+                <li class="facebook">
+                    <span class="icon"><em>Like this on Facebook</em></span>
+                    <span class="text"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsoulwire.co.uk&amp;layout=button_count&amp;show_faces=true&amp;width=110&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe></span>
+                </li>
+            </ul>
+        </aside>
+        <!--
+            FOOTER
+        -->
+        <footer id="footer">
+            <nav class="disabled">
+                    <a class="button down" title="Experiments" href="/experiments/"><span>Experiments</span></a>
+                    <p><em>Check out my</em> <strong>Experiments</strong></p>
+            </nav>
+            <p class="about"><a href="http://soulwire.co.uk">soulwire</a> &copy;MMXII - Justin Windle</p>
+            <p class="info" title="Navigate using your mouse &amp; Keyboard"></p>
+        </footer>
+        <!--
+            SHIT BROWSER WARNING
+        -->
+        <aside class="shitbrowser hidden">
+            <p><strong>I'm sorry to inform you that your browser sucks :(</strong> This site uses features that <em>require</em> a modern browser - why not try <a href="http://www.google.com/chrome/" target="_blank" title="Download Chrome">Chrome</a>?</p>
+        </aside>
+        <!-- SCRIPTS -->
+        <!-- Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <!-- <block output="/js/scripts.min.js"> -->
+        <script src="/js/lib/jquery.easing.1.3.js"></script>
+        <script src="/js/lib/requestanimationframe.js"></script>
+        <!-- Plugins -->
+        <script src="/js/plugins/pushtext.js"></script>
+        <script src="/js/plugins/slicer.js"></script>
+        <!-- Namespace -->
+        <script src="/js/SOULWIRE.js"></script>
+        <!-- Section Controllers -->
+        <script src="/js/controller/SOULWIRE.AbstractController.js"></script>
+        <script src="/js/controller/SOULWIRE.Introduction.js"></script>
+        <script src="/js/controller/SOULWIRE.Experiments.js"></script>
+        <script src="/js/controller/SOULWIRE.Stream.js"></script>
+        <script src="/js/controller/SOULWIRE.Nodes.js"></script>
+        <script src="/js/controller/SOULWIRE.Discussion.js"></script>
+        <!-- Components -->
+        <script src="/js/component/SOULWIRE.SlideShow.js"></script>
+        <script src="/js/component/SOULWIRE.Scroller.js"></script>
+        <!-- Models -->
+        <script src="/js/model/SOULWIRE.Twitter.js"></script>
+        <script src="/js/model/SOULWIRE.Wordpress.js"></script>
+        <script src="/js/model/SOULWIRE.Flickr.js"></script>
+        <!-- Visuals -->
+        <script src="/js/display/SOULWIRE.Particles.js"></script>
+        <script src="/js/display/SOULWIRE.Parallax.js"></script>
+        <!-- Utilities -->
+        <script src="/js/utils/SOULWIRE.DateUtils.js"></script>
+        <!-- Core -->
+        <script src="/js/SOULWIRE.SectionController.js"></script>
+        <script src="/js/SOULWIRE.SectionMenu.js"></script>
+        <script src="/js/SOULWIRE.SectionScroll.js"></script>
+        <script src="/js/SOULWIRE.Signals.js"></script>
+        <script src="/js/SOULWIRE.Footer.js"></script>
+        <!-- Startup -->
+        <script src="/js/bootstrap.js"></script>
+        <!-- </block> -->
+        <script>
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+            {lang: 'en-GB'}
+        </script>
+    </body>
 </html>

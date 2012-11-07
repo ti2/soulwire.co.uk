@@ -99,7 +99,7 @@ var sim = new Sim(),
 function init() {
 
     var np,
-    		op,
+            op,
         mouse,
         anchor,
         step = STEP,
@@ -207,10 +207,10 @@ function step( now ) {
         cos = Math.cos(theta + HALF_PI) * r;
 
         context.quadraticCurveTo(
-        	p1.x + cos,
-	        p1.y + sin,
-  	      p2.x + cos,
-    	    p2.y + sin);
+            p1.x + cos,
+            p1.y + sin,
+            p2.x + cos,
+            p2.y + sin);
 
     }
 
